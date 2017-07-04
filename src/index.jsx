@@ -14,8 +14,10 @@ function TabItem2(props) {
 
 function TabContent(props) {
   return (
-    <TabItem1 />
-    <TabItem2 />
+    <div>
+      <TabItem1 />
+      <TabItem2 />
+    </div>
   );
 }
 

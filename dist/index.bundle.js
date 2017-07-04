@@ -88,6 +88,23 @@ function TabItem1(props) {
   );
 }
 
+function TabItem2(props) {
+  return React.createElement(
+    'div',
+    null,
+    'TabItem2'
+  );
+}
+
+function TabContent(props) {
+  return React.createElement(
+    'div',
+    null,
+    React.createElement(TabItem1, null),
+    React.createElement(TabItem2, null)
+  );
+}
+
 var Tabs = function (_React$Component) {
   _inherits(Tabs, _React$Component);
 
@@ -124,7 +141,6 @@ var Tabs = function (_React$Component) {
 
     // methods  
 
-
   }, {
     key: 'render',
     value: function render() {
@@ -142,7 +158,7 @@ var Tabs = function (_React$Component) {
             );
           })
         ),
-        React.createElement(TabItem1, null)
+        React.createElement(TabContent, null)
       );
     }
   }]);
