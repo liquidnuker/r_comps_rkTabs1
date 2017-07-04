@@ -154,7 +154,7 @@ var Tabs = function (_React$Component) {
   }, {
     key: 'render',
     value: function render() {
-      var stateCurrentItem = this.state.currentItem;
+      // const stateCurrentItem = this.state.currentItem;
       return React.createElement(
         'div',
         null,
@@ -169,7 +169,7 @@ var Tabs = function (_React$Component) {
             );
           })
         ),
-        React.createElement(TabContent, { pr_currentItem: stateCurrentItem })
+        React.createElement(TabContent, { pr_currentItem: this.state.currentItem })
       );
     }
   }]);

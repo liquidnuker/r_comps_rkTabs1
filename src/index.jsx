@@ -57,7 +57,7 @@ class Tabs extends React.Component {
 
   // methods  
   render() {
-    const stateCurrentItem = this.state.currentItem;
+    // const stateCurrentItem = this.state.currentItem;
     return (
       <div>
 
@@ -68,7 +68,7 @@ class Tabs extends React.Component {
         </div>
         )}
       </nav>
-      <TabContent pr_currentItem={stateCurrentItem} />
+      <TabContent pr_currentItem={this.state.currentItem} />
 
       </div> 
       );
