@@ -96,12 +96,21 @@ function TabItem2(props) {
   );
 }
 
+// function TabContent(props) {
+//   return (
+//     <div>
+//       <TabItem1 />
+//       <TabItem2 />
+//     </div>
+//   );
+// }
+
 function TabContent(props) {
+  // const currentItem = props.pr_currentItem;
   return React.createElement(
     'div',
     null,
-    React.createElement(TabItem1, null),
-    React.createElement(TabItem2, null)
+    props.pr_currentItem
   );
 }
 
@@ -118,7 +127,8 @@ var Tabs = function (_React$Component) {
         tabName: 'tab1'
       }, {
         tabName: 'tab2'
-      }]
+      }],
+      currentItem: 'tab7'
     };
 
     // binders
@@ -144,6 +154,7 @@ var Tabs = function (_React$Component) {
   }, {
     key: 'render',
     value: function render() {
+      var stateCurrentItem = this.state.currentItem;
       return React.createElement(
         'div',
         null,
@@ -158,7 +169,7 @@ var Tabs = function (_React$Component) {
             );
           })
         ),
-        React.createElement(TabContent, null)
+        React.createElement(TabContent, { pr_currentItem: stateCurrentItem })
       );
     }
   }]);

@@ -12,12 +12,19 @@ function TabItem2(props) {
   );
 }
 
+// function TabContent(props) {
+//   return (
+//     <div>
+//       <TabItem1 />
+//       <TabItem2 />
+//     </div>
+//   );
+// }
+
 function TabContent(props) {
+  // const currentItem = props.pr_currentItem;
   return (
-    <div>
-      <TabItem1 />
-      <TabItem2 />
-    </div>
+    <div>{props.pr_currentItem}</div>
   );
 }
 
@@ -32,7 +39,8 @@ class Tabs extends React.Component {
         {
           tabName: 'tab2'
         },
-      ]
+      ],
+      currentItem: 'tab7'
     };
 
     // binders
@@ -49,6 +57,7 @@ class Tabs extends React.Component {
 
   // methods  
   render() {
+    const stateCurrentItem = this.state.currentItem;
     return (
       <div>
 
@@ -59,7 +68,7 @@ class Tabs extends React.Component {
         </div>
         )}
       </nav>
-      <TabContent />
+      <TabContent pr_currentItem={stateCurrentItem} />
 
       </div> 
       );
