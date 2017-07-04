@@ -72,6 +72,8 @@
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
+__webpack_require__(1);
+
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
 function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
@@ -82,17 +84,17 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
 // import ReactDOM from "react-dom";
 function TabItem1(props) {
   return React.createElement(
-    'div',
+    "div",
     null,
-    'TabItem1'
+    "TabItem1"
   );
 }
 
 function TabItem2(props) {
   return React.createElement(
-    'div',
+    "div",
     null,
-    'TabItem2'
+    "TabItem2"
   );
 }
 
@@ -128,7 +130,7 @@ var Tabs = function (_React$Component) {
 
 
   _createClass(Tabs, [{
-    key: 'componentDidMount',
+    key: "componentDidMount",
     value: function componentDidMount() {
       console.log("componentDidMount");
     }
@@ -136,23 +138,27 @@ var Tabs = function (_React$Component) {
     // methods  
 
   }, {
-    key: 'render',
+    key: "render",
     value: function render() {
       return React.createElement(
-        'div',
+        "div",
         null,
         React.createElement(
-          'nav',
-          { className: 'tabs1-01' },
+          "nav",
+          { className: "tabs1-01" },
           this.state.items.map(function (i) {
             return React.createElement(
-              'div',
-              { className: 'tabs', key: i.tabName },
+              "div",
+              { className: "tabs", key: i.tabName },
               i.tabName
             );
           })
         ),
-        React.createElement(TabContent, { pr_currentItem: this.state.currentItem })
+        React.createElement(
+          "div",
+          { className: "tabs1-01_content" },
+          React.createElement(TabContent, { pr_currentItem: this.state.currentItem })
+        )
       );
     }
   }]);
@@ -161,6 +167,12 @@ var Tabs = function (_React$Component) {
 }(React.Component);
 
 ReactDOM.render(React.createElement(Tabs, null), document.getElementById('root'));
+
+/***/ }),
+/* 1 */
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
 
 /***/ })
 /******/ ]);

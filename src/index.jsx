@@ -1,3 +1,5 @@
+import "./styles/main.scss";
+
 // import React from "react";
 // import ReactDOM from "react-dom";
 function TabItem1(props) {
@@ -54,7 +56,9 @@ class Tabs extends React.Component {
         </div>
         )}
       </nav>
-      <TabContent pr_currentItem={this.state.currentItem} />
+      <div className="tabs1-01_content">
+        <TabContent pr_currentItem={this.state.currentItem} />
+      </div>
 
       </div> 
       );
