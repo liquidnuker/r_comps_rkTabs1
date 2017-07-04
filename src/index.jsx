@@ -15,10 +15,13 @@ function TabItem2(props) {
 }
 
 function TabContent(props) {
+  if (props.pr_currentItem === "tab1") {
+    return <TabItem1 />;
+  }
+
   if (props.pr_currentItem === "tab2") {
     return <TabItem2 />;
-  }
-  return <TabItem1 />;  
+  }  
 }
 
 class Tabs extends React.Component {
@@ -37,7 +40,6 @@ class Tabs extends React.Component {
     };
 
     // binders
-    this.changeTabItem = this.changeTabItem.bind(this);
   }
 
   // lifecycle hooks
