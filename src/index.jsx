@@ -33,7 +33,7 @@ class Tabs extends React.Component {
           tabName: 'tab2'
         },
       ],
-      currentItem: 'tab2'
+      currentItem: 'tab1'
     };
 
     // binders
@@ -47,7 +47,9 @@ class Tabs extends React.Component {
   
   // methods  
   changeTabItem(item) {
-    console.log(item);
+    this.setState(prevState => ({
+      currentItem: item
+    }));
   }
 
   render() {

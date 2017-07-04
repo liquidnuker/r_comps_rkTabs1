@@ -119,7 +119,7 @@ var Tabs = function (_React$Component) {
       }, {
         tabName: 'tab2'
       }],
-      currentItem: 'tab2'
+      currentItem: 'tab1'
     };
 
     // binders
@@ -141,7 +141,11 @@ var Tabs = function (_React$Component) {
   }, {
     key: "changeTabItem",
     value: function changeTabItem(item) {
-      console.log(item);
+      this.setState(function (prevState) {
+        return {
+          currentItem: item
+        };
+      });
     }
   }, {
     key: "render",
