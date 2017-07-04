@@ -6,6 +6,19 @@ function TabItem1(props) {
   );
 }
 
+function TabItem2(props) {
+  return (
+    <div>TabItem2</div>
+  );
+}
+
+function TabContent(props) {
+  return (
+    <TabItem1 />
+    <TabItem2 />
+  );
+}
+
 class Tabs extends React.Component {
   constructor(props) {
     super(props);
@@ -44,15 +57,12 @@ class Tabs extends React.Component {
         </div>
         )}
       </nav>
-      <TabItem1 />
+      <TabContent />
 
       </div> 
       );
     }  
 }
-
-
-
 
 ReactDOM.render(
   <Tabs />,
