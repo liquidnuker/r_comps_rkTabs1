@@ -37,6 +37,7 @@ class Tabs extends React.Component {
     };
 
     // binders
+    this.changeTabItem = this.changeTabItem.bind(this);
   }
 
   // lifecycle hooks
@@ -45,13 +46,18 @@ class Tabs extends React.Component {
   }
   
   // methods  
+  changeTabItem(item) {
+    console.log(item);
+  }
+
   render() {
     return (
       <div>
 
       <nav className="tabs1-01">
       {this.state.items.map((i) =>
-        <div className="tabs" key={i.tabName}>
+        <div className="tabs" key={i.tabName} 
+        onClick={() => { this.changeTabItem(i.tabName) }}>
         {i.tabName}
         </div>
         )}

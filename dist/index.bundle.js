@@ -123,6 +123,7 @@ var Tabs = function (_React$Component) {
     };
 
     // binders
+    _this.changeTabItem = _this.changeTabItem.bind(_this);
     return _this;
   }
 
@@ -138,8 +139,15 @@ var Tabs = function (_React$Component) {
     // methods  
 
   }, {
+    key: "changeTabItem",
+    value: function changeTabItem(item) {
+      console.log(item);
+    }
+  }, {
     key: "render",
     value: function render() {
+      var _this2 = this;
+
       return React.createElement(
         "div",
         null,
@@ -149,7 +157,10 @@ var Tabs = function (_React$Component) {
           this.state.items.map(function (i) {
             return React.createElement(
               "div",
-              { className: "tabs", key: i.tabName },
+              { className: "tabs", key: i.tabName,
+                onClick: function onClick() {
+                  _this2.changeTabItem(i.tabName);
+                } },
               i.tabName
             );
           })
