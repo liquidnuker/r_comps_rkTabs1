@@ -49,7 +49,7 @@ module.exports = {
     ]
   },
   externals : {
-    react: 'react',
+    React: 'react',
     ReactDOM: 'react-dom'
     // $: 'jquery',
     // Vue: 'vue',

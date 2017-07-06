@@ -1,18 +1,29 @@
 import "./styles/main.scss";
 
-// import React from "react";
-// import ReactDOM from "react-dom";
+// ok
+import {TabItem2} from "./TabItem2.jsx";
+
 function TabItem1(props) {
   return (
     <div>TabItem1</div>
   );
 }
 
-function TabItem2(props) {
-  return (
-    <div>TabItem2</div>
-  );
-}
+// ok
+// function TabItem2(props) {
+//   return (
+//     <div>TabItem2</div>
+//   );
+// }
+
+// ok
+// class TabItem2 extends React.Component {
+//   render() {
+//     return (
+//       <div>TabItem2</div>
+//     );
+//   }
+// }
 
 function TabContent(props) {
   if (props.pr_currentItem === "tab1") {
