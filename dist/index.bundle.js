@@ -2367,9 +2367,19 @@ var Tabs = function (_React$Component) {
     // methods  
 
   }, {
+    key: 'indexFinder',
+    value: function indexFinder(value) {
+      for (var key = 0; key < this.state.items.length; key++) {
+        if (this.state.items[key].tabName == value) {
+          return key;
+        }
+      }
+    }
+  }, {
     key: 'changeTabItem',
     value: function changeTabItem(item, index) {
       console.log(item, index);
+
       this.setState(function (prevState) {
         return {
           tabContent: item

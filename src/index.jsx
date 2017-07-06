@@ -46,8 +46,17 @@ class Tabs extends React.Component {
   }
   
   // methods  
+  indexFinder(value) {
+    for (var key = 0; key < this.state.items.length; key++) {
+      if (this.state.items[key].tabName == value) {
+        return key;
+      }
+    }
+  }
+
   changeTabItem(item, index) {
     console.log(item, index);
+
     this.setState(prevState => ({
       tabContent: item
     }));
