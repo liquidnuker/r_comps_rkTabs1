@@ -2341,11 +2341,14 @@ var Tabs = function (_React$Component) {
 
     _this.state = {
       items: [{
-        tabName: 'item1'
+        tabName: 'item1',
+        isActive: false
       }, {
-        tabName: 'item2'
+        tabName: 'item2',
+        isActive: false
       }],
-      tabContent: 'item1'
+      tabContent: 'item1',
+      activeTab: 0
     };
 
     // binders
