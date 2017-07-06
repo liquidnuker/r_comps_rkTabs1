@@ -1,11 +1,4 @@
-// const TabItem2 = function TabItem2(props) {
-//   return (
-//     <div>TabItem2</div>
-//   );
-// }
-
-// export {TabItem2};
-
+// use export default for async wrap
 export default function TabItem2(props) {
   return (
     <div>TabItem2</div>

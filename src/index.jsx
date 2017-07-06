@@ -2,6 +2,9 @@ import "./styles/main.scss";
 
 // ok
 // import {TabItem2} from "./TabItem2.jsx";
+
+// async
+import AsyncTabItem1 from './AsyncTabItem1.jsx';
 import AsyncTabItem2 from './AsyncTabItem2.jsx';
 
 function TabItem1(props) {
@@ -28,7 +31,7 @@ function TabItem1(props) {
 
 function TabContent(props) {
   if (props.pr_currentItem === "tab1") {
-    return <TabItem1 />;
+    return <AsyncTabItem1 />;
   }
 
   if (props.pr_currentItem === "tab2") {
