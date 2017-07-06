@@ -2390,7 +2390,8 @@ var Tabs = function (_React$Component) {
           this.state.items.map(function (i, index) {
             return React.createElement(
               'div',
-              { key: i.tabName,
+              { className: _this2.state.items[index].isActive ? 'active' : '',
+                key: i.tabName,
                 onClick: function onClick() {
                   _this2.changeTabItem(i.tabName, index);
                 } },

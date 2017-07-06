@@ -60,7 +60,8 @@ class Tabs extends React.Component {
 
       <nav className="tabs1-01">
       {this.state.items.map((i, index) =>
-        <div key={i.tabName} 
+        <div className={ this.state.items[index].isActive ? 'active': '' } 
+        key={i.tabName} 
         onClick={() => { this.changeTabItem(i.tabName, index) }}>
         {i.tabName}
         </div>
