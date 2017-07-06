@@ -16,7 +16,7 @@ h1 {
 // ==================================================/
 // up to 3 tabs
 .tabs1-01 {
-  .tabs {
+  > div {
     @extend %padd--4;
     display: inline-block;
     border: 1px solid #000;
@@ -24,6 +24,10 @@ h1 {
     border-top-right-radius: 4px;
     margin-left: 2px;
     cursor: pointer;
+  }
+
+  .active {
+    background-color: #666;
   }
 }
 
