@@ -26,7 +26,7 @@ class Tabs extends React.Component {
       items: [
         {
           tabName: 'item1',
-          isActive: false
+          isActive: true
         },
         {
           tabName: 'item2',
@@ -34,7 +34,7 @@ class Tabs extends React.Component {
         },
       ],
       tabContent: 'item1',
-      activeTab: 0
+      activeTab: 0,
     };
 
     // binders
@@ -46,20 +46,22 @@ class Tabs extends React.Component {
   }
   
   // methods  
-  changeTabItem(item) {
+  changeTabItem(item, index) {
+    console.log(item, index);
     this.setState(prevState => ({
       tabContent: item
     }));
   }
 
   render() {
+
     return (
       <div>
 
       <nav className="tabs1-01">
-      {this.state.items.map((i) =>
+      {this.state.items.map((i, index) =>
         <div key={i.tabName} 
-        onClick={() => { this.changeTabItem(i.tabName) }}>
+        onClick={() => { this.changeTabItem(i.tabName, index) }}>
         {i.tabName}
         </div>
         )}
@@ -77,3 +79,4 @@ ReactDOM.render(
   <Tabs />,
   document.getElementById('root')
 );
+

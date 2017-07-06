@@ -2342,7 +2342,7 @@ var Tabs = function (_React$Component) {
     _this.state = {
       items: [{
         tabName: 'item1',
-        isActive: false
+        isActive: true
       }, {
         tabName: 'item2',
         isActive: false
@@ -2368,7 +2368,8 @@ var Tabs = function (_React$Component) {
 
   }, {
     key: 'changeTabItem',
-    value: function changeTabItem(item) {
+    value: function changeTabItem(item, index) {
+      console.log(item, index);
       this.setState(function (prevState) {
         return {
           tabContent: item
@@ -2386,12 +2387,12 @@ var Tabs = function (_React$Component) {
         React.createElement(
           'nav',
           { className: 'tabs1-01' },
-          this.state.items.map(function (i) {
+          this.state.items.map(function (i, index) {
             return React.createElement(
               'div',
               { key: i.tabName,
                 onClick: function onClick() {
-                  _this2.changeTabItem(i.tabName);
+                  _this2.changeTabItem(i.tabName, index);
                 } },
               i.tabName
             );
