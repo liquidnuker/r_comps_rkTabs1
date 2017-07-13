@@ -40,16 +40,8 @@ class Tabs extends React.Component {
   }
   
   // methods  
-  indexFinder(value) {
-    for (var key = 0; key < this.state.items.length; key++) {
-      if (this.state.items[key].tabName == value) {
-        return key;
-      }
-    }
-  }
-
-  setActiveTab(item) {
-    let activeIndex = this.indexFinder(item);
+  setActiveTab(index) {
+    let activeIndex = index;
     this.state.items[activeIndex].isActive = true;      
 
     // remove activeTab
@@ -61,8 +53,8 @@ class Tabs extends React.Component {
     }
   }
 
-  changeTabItem(item) {
-    this.setActiveTab(item);
+  changeTabItem(item, index) {
+    this.setActiveTab(index);
     
     this.setState(prevState => ({
       tabContent: item
@@ -77,7 +69,7 @@ class Tabs extends React.Component {
       {this.state.items.map((i, index) =>
         <div className={ this.state.items[index].isActive ? 'active': '' } 
         key={i.tabName} 
-        onClick={() => { this.changeTabItem(i.tabName) }}>
+        onClick={() => { this.changeTabItem(i.tabName, index) }}>
         {i.tabName}
         </div>
         )}
