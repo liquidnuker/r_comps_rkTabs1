@@ -40,14 +40,16 @@ export default class Tabs extends React.Component {
   // methods  
   setActiveTab(index) {
     let activeIndex = index;
-    this.state.items[activeIndex].isActive = true;      
+    let state = this.state; // "this" remover
+    
+    state.items[activeIndex].isActive = true;      
 
     // remove activeTab
-    if (this.state.activeTab !== activeIndex) {
-      this.state.items[this.state.activeTab].isActive = false;
+    if (state.activeTab !== activeIndex) {
+      state.items[state.activeTab].isActive = false;
 
       // set current activeTab
-      this.state.activeTab = activeIndex;
+      state.activeTab = activeIndex;
     }
   }
 
