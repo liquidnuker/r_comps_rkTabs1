@@ -62,14 +62,20 @@ export default class Tabs extends React.Component {
   }
 
   render() {
+    const items = this.state.items;
     return (
       <div>
 
-      <nav className="tabs1-01">
-      {this.state.items.map((i, index) =>
-        <div className={ this.state.items[index].isActive ? 'active': '' } 
+      <nav className="tabs1-01" role="tablist">
+      {items.map((i, index) =>
+        <div 
+        className={ items[index].isActive ? 'active': '' } 
         key={i.tabName} 
-        onClick={() => { this.changeTabItem(i.tabName, index) }}>
+        onClick={() => { this.changeTabItem(i.tabName, index) }}
+        tabindex="0" 
+        aria-posinset={index + 1} 
+        aria-setsize={items.length}
+        aria-selected={i.isActive}>
         {i.tabName}
         </div>
         )}
