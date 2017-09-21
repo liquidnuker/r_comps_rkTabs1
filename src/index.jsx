@@ -1,6 +1,6 @@
 import "./styles/main.scss";
 
-import RkTabs1 from "./RkTabs1_wrap.jsx";
+import RkTabs1 from "./components/RkTabs1_wrap.jsx";
 
 function Home(props) {
   return (
