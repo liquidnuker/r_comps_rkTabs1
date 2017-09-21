@@ -1,1 +1,24 @@
-webpackJsonp([2],{41:function(e,t,n){"use strict";function a(e){return React.createElement("div",{class:"panels"},"TabItem1")}Object.defineProperty(t,"__esModule",{value:!0}),t.default=a}});
+webpackJsonp([2],{
+
+/***/ 50:
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = TabItem1;
+// use export default for async wrap
+function TabItem1(props) {
+  return React.createElement(
+    "div",
+    { className: "rkTabs101_tabcontent" },
+    "TabItem1"
+  );
+}
+
+/***/ })
+
+});

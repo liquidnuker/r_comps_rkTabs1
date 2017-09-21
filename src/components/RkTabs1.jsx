@@ -66,10 +66,10 @@ export default class Tabs extends React.Component {
     return (
       <div>
 
-      <nav className="tabs1-01" role="tablist">
+      <nav className="rkTabs101" role="tablist">
       {items.map((i, index) =>
         <div 
-        className={ items[index].isActive ? 'active': '' } 
+        className={ items[index].isActive ? 'tabs active': 'tabs' } 
         key={i.tabName} 
         onClick={() => { this.changeTabItem(i.tabName, index) }}
         tabindex="0" 
@@ -80,7 +80,8 @@ export default class Tabs extends React.Component {
         </div>
         )}
       </nav>
-      <div className="tabs1-01_content">
+      <div className="row col-sm-12 rkTabs101_panels"
+      aria-live="assertive" aria-atomic="true">
         <TabContent pr_tabContent={this.state.tabContent} />
       </div>
 

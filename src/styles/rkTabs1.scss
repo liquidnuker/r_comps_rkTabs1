@@ -1,0 +1,73 @@
+// rkTabs101
+// ==================================================/
+@mixin rkTabs101_theme() {
+  .rkTabs101 {
+    background-color: #141416;
+
+    .tabs {
+      background-color: #ccc;
+      border: 1px solid #000;
+      margin-top: 2px;
+    }
+
+    .active {
+      background-color: #f6f6f6;
+      border-top: 1px solid #be0101;
+    }
+  }
+
+  .rkTabs101_panels {
+    background-color: #2c2d32;
+  }
+
+  .rkTabs101_tabcontent {
+    background-color: #343437;
+    border-top: 1px dashed #5c5d60;
+    color: #d5d5d5;
+  }
+}
+@include rkTabs101_theme();
+
+.rkTabs101 {
+  .tabs {
+    @extend %padd--4;
+    @extend %display--inline-block;
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+    margin-left: 2px;
+    cursor: pointer;
+  }
+
+  .active {
+    
+  }
+}
+
+.rkTabs101_panels {
+  @extend %padd--4;
+  margin-top: -1px;
+}
+
+.rkTabs101_tabcontent {
+  @extend %padd--4;    
+}
+
+//  media queries
+// mobile portrait (320x480) 
+@include mq($from: mobile) {
+  .rkTabs101 {
+    > input[type="radio"] + label {
+      width: 28%;
+      
+    }
+  }
+}
+
+// *mobile landscape (480x320)
+@include mq($from: mobileLandscape) {
+  .rkTabs101 {
+    > input[type="radio"] + label {
+      width: auto;      
+    }
+  }
+}
