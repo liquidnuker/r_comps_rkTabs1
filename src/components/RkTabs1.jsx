@@ -1,13 +1,17 @@
-import AsyncTabItem1 from './TabItem1_wrap.jsx';
-import AsyncTabItem2 from './TabItem2_wrap.jsx';
+// optional dynamic import wrapper
+// import AsyncTabItem1 from './TabItem1_wrap.jsx';
+// import AsyncTabItem2 from './TabItem2_wrap.jsx';
+
+import TabItem1 from './TabItem1.jsx';
+import TabItem2 from './TabItem2.jsx';
 
 function TabContent(props) {
   if (props.pr_tabContent === "item1") {
-    return <AsyncTabItem1 />;
+    return <TabItem1 />;
   }
 
   if (props.pr_tabContent === "item2") {
-    return <AsyncTabItem2 />;
+    return <TabItem2 />;
   }  
 }
 
@@ -39,17 +43,14 @@ export default class Tabs extends React.Component {
   
   // methods  
   setActiveTab(index) {
-    let activeIndex = index;
-    let state = this.state; // "this" remover
-    
-    state.items[activeIndex].isActive = true;      
+    this.state.items[index].isActive = true;      
 
     // remove activeTab
-    if (state.activeTab !== activeIndex) {
-      state.items[state.activeTab].isActive = false;
+    if (this.state.activeTab !== index) {
+      this.state.items[this.state.activeTab].isActive = false;
 
       // set current activeTab
-      state.activeTab = activeIndex;
+      this.state.activeTab = index;
     }
   }
 
